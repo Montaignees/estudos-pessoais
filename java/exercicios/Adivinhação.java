@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class adivinhar {
     public static void main(String[] args) {
         int tentativa;
+        boolean acertou = false;
 
         Scanner leitor = new Scanner(System.in);
         Random rand = new Random();
@@ -16,6 +17,7 @@ public class adivinhar {
 
             if (tentativa == numeroRand) {
                 System.out.print("parábens você acertou o número!!");
+                acertou = true;
                 break;
 
             } else if (tentativa > numeroRand) {
@@ -27,7 +29,10 @@ public class adivinhar {
             }
 
         }
-        System.err.println("infelizmente você perdeu. O número era: " + numeroRand);
+
+        if (acertou!= true) {
+            System.err.println("infelizmente você perdeu. O número era: " + numeroRand);
+        }
         leitor.close();
     }
 }
