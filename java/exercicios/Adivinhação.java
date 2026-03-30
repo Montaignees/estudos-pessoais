@@ -30,7 +30,7 @@ public class adivinhar {
 
         }
 
-        if (acertou!= true) {
+        if (acertou != true) {
             System.err.println("infelizmente você perdeu. O número era: " + numeroRand);
         }
         leitor.close();
